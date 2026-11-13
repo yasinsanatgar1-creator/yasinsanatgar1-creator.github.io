@@ -14,6 +14,7 @@
   <meta property="og:description" content="A visual journey through Russia: grand cities, vast landscapes, and a rich culture.">
   <meta property="og:image" content="https://images.unsplash.com/photo-1513326738677-b964603b136d?auto=format&amp;fit=crop&amp;w=1200&amp;q=85">
   <title>Russia | A Land of Endless Horizons</title>
+  <link rel="preload" as="image" href="https://images.unsplash.com/photo-1513326738677-b964603b136d?auto=format&amp;fit=crop&amp;w=1600&amp;q=75" fetchpriority="high">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -35,6 +36,9 @@
     .links a{padding:8px 14px;border-radius:999px;transition:background .2s,color .2s}
     .links a:hover{background:#ffffff14;color:var(--gold)}
     .hero{min-height:760px;position:relative;background-image:linear-gradient(90deg,rgba(8,12,19,.88),rgba(8,12,19,.12) 78%),linear-gradient(0deg,var(--night),transparent 48%),url('https://images.unsplash.com/photo-1513326738677-b964603b136d?auto=format&fit=crop&w=2000&q=85');background-position:center,center,center 45%;}
+    .hero{overflow:hidden;background-image:linear-gradient(90deg,rgba(8,12,19,.88),rgba(8,12,19,.12) 78%),linear-gradient(0deg,var(--night),transparent 48%)}
+    .hero-image{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 45%;z-index:0}
+    .hero>.wrap{position:relative;z-index:1}
     .hero-content{max-width:700px;padding-top:100px}
     .eyebrow{font-size:.78rem;letter-spacing:.14em;text-transform:uppercase}
     .hero h1{font-size:clamp(3.2rem,8vw,6.3rem);letter-spacing:-.045em;text-wrap:balance}
@@ -57,7 +61,7 @@
     .culture-item .icon{display:inline-grid;place-items:center;width:48px;height:48px;border-radius:14px;background:#f1cf8b18}
     .closing{background:radial-gradient(ellipse at center top,#30394a,#161b28 70%)}
     a:focus-visible{outline:3px solid var(--gold);outline-offset:4px}
-    @media(max-width:760px){.hero{min-height:680px;background-position:center,center,58% center}.grid{gap:16px}section{padding:82px 0}}
+    @media(max-width:760px){.hero{min-height:680px}.hero-image{object-position:58% center}.grid{gap:16px}section{padding:82px 0}}
     @media(max-width:500px){.hero{min-height:620px}.hero h1{font-size:clamp(2.8rem,14vw,4rem)}.hero-content{padding-top:80px}.links{gap:2px}.links a{padding:7px 9px}.facts{border-radius:15px}.card{border-radius:15px}.card img{height:225px}section{padding:68px 0}}
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important}}
   </style>
@@ -68,7 +72,7 @@
     <div class="links"><a href="#cities">Cities</a><a href="#about">About</a><a href="#culture">Culture</a></div>
   </nav></header>
   <main>
-    <section class="hero" id="home"><div class="wrap"><div class="hero-content">
+    <section class="hero" id="home"><img class="hero-image" src="https://images.unsplash.com/photo-1513326738677-b964603b136d?auto=format&amp;fit=crop&amp;w=1600&amp;q=75" alt="Saint Basil’s Cathedral in Moscow" fetchpriority="high" loading="eager" decoding="async"><div class="wrap"><div class="hero-content">
       <span class="eyebrow">WELCOME TO A LAND OF ENDLESS HORIZONS</span>
       <h1>Russia, in all<br>its wonder</h1>
       <p>From Moscow’s colorful domes to the white nights of St. Petersburg, Russia is a world of history, art, and unforgettable landscapes.</p>
